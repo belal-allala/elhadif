@@ -1,24 +1,27 @@
 import { motion } from 'framer-motion'
 import { Users, Heart, Calendar } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function Hero() {
+    const { t } = useTranslation()
+    
     const stats = [
         {
             icon: Users,
-            number: '+500',
-            label: 'المستفيدين سنوياً',
+            number: t('hero.stat1Number'),
+            label: t('hero.stat1Label'),
             color: 'primary',
         },
         {
             icon: Heart,
-            number: '+50',
-            label: 'متطوع ومتطوعة',
+            number: t('hero.stat2Number'),
+            label: t('hero.stat2Label'),
             color: 'accent',
         },
         {
             icon: Calendar,
-            number: '+5',
-            label: 'أنشطة وبرامج أسبوعية',
+            number: t('hero.stat3Number'),
+            label: t('hero.stat3Label'),
             color: 'secondary',
         },
     ]
@@ -103,7 +106,7 @@ function Hero() {
                         variants={itemVariants}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-secondary mb-6 leading-tight"
                     >
-                        جمعية الهادف للتنمية والتعاون
+                        {t('hero.title')}
                     </motion.h1>
 
                     {/* Slogan */}
@@ -111,7 +114,7 @@ function Hero() {
                         variants={itemVariants}
                         className="text-2xl sm:text-3xl md:text-4xl text-primary font-semibold mb-4"
                     >
-                        معاً نبني مستقبلاً أفضل
+                        {t('hero.slogan')}
                     </motion.p>
 
                     {/* Date de fondation */}
@@ -119,7 +122,7 @@ function Hero() {
                         variants={itemVariants}
                         className="text-lg text-gray-600 mb-12"
                     >
-                        تأسست في 23 يوليو 2002
+                        {t('hero.foundedDate')} <span className="latin-numbers">{t('hero.foundedDay')}</span> {t('hero.foundedMonth')} <span className="latin-numbers">{t('hero.foundedYear')}</span>
                     </motion.p>
 
                     {/* Bouton CTA */}
@@ -128,7 +131,7 @@ function Hero() {
                             href="#axes"
                             className="inline-block bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                         >
-                            اكتشف أنشطتنا
+                            {t('hero.discoverActivities')}
                         </a>
                     </motion.div>
 
@@ -149,7 +152,7 @@ function Hero() {
                                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-${stat.color}/10 mb-4`}>
                                         <Icon className={`w-8 h-8 text-${stat.color}`} />
                                     </div>
-                                    <div className={`text-4xl font-bold text-${stat.color} mb-2`}>
+                                    <div className={`text-4xl font-bold text-${stat.color} mb-2 latin-numbers`}>
                                         {stat.number}
                                     </div>
                                     <div className="text-gray-700 font-medium text-lg">

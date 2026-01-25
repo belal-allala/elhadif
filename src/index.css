@@ -28,3 +28,45 @@
     font-family: sans-serif;
   }
 }
+
+@layer utilities {
+  /* Classe utilitaire principale pour forcer les nombres en format latin (0-9) et direction LTR */
+  .latin-numbers {
+    direction: ltr !important;
+    unicode-bidi: isolate;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* Pour les éléments contenant des numéros de téléphone, RIB, IBAN, etc. */
+  .phone-number,
+  .rib-number,
+  .iban-number,
+  .account-number,
+  .numeric-value {
+    direction: ltr !important;
+    unicode-bidi: isolate;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* Force les chiffres latins dans les spans avec lang="fr" */
+  span[lang="fr"] {
+    direction: ltr !important;
+    unicode-bidi: isolate;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    display: inline-block;
+  }
+
+  /* Pour tous les liens téléphone et email */
+  a[href^="tel:"] span,
+  a[href^="mailto:"] {
+    direction: ltr !important;
+    unicode-bidi: isolate;
+  }
+}

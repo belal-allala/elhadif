@@ -1,40 +1,42 @@
 import { motion } from 'framer-motion'
 import { Handshake, Shield, Lightbulb, Eye, Users, Award, CheckCircle, Target, TrendingUp } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function AboutPage() {
+    const { t } = useTranslation()
     const values = [
-        { name: 'التعاون', icon: Handshake, color: 'text-blue-600', bgColor: 'bg-blue-100' },
-        { name: 'المسؤولية', icon: Shield, color: 'text-red-600', bgColor: 'bg-red-100' },
-        { name: 'الإبداع', icon: Lightbulb, color: 'text-yellow-600', bgColor: 'bg-yellow-100' },
-        { name: 'الشفافية', icon: Eye, color: 'text-green-600', bgColor: 'bg-green-100' },
-        { name: 'المواطنة', icon: Users, color: 'text-purple-600', bgColor: 'bg-purple-100' },
+        { name: t('about.cooperation'), icon: Handshake, color: 'text-blue-600', bgColor: 'bg-blue-100' },
+        { name: t('about.responsibility'), icon: Shield, color: 'text-red-600', bgColor: 'bg-red-100' },
+        { name: t('about.creativity'), icon: Lightbulb, color: 'text-yellow-600', bgColor: 'bg-yellow-100' },
+        { name: t('about.transparency'), icon: Eye, color: 'text-green-600', bgColor: 'bg-green-100' },
+        { name: t('about.citizenship'), icon: Users, color: 'text-purple-600', bgColor: 'bg-purple-100' },
     ]
 
     const objectives = [
         {
             number: '01',
-            title: 'بناء قدرات الشباب وتمكينهم',
+            title: t('about.objective1'),
             icon: Award,
             color: 'bg-green-500',
             textColor: 'text-green-600',
         },
         {
             number: '02',
-            title: 'تعزيز المشاركة المجتمعية والمواطنة',
+            title: t('about.objective2'),
             icon: CheckCircle,
             color: 'bg-cyan-500',
             textColor: 'text-cyan-600',
         },
         {
             number: '03',
-            title: 'إثراء الحياة الثقافية والرياضية',
+            title: t('about.objective3'),
             icon: Target,
             color: 'bg-yellow-500',
             textColor: 'text-yellow-600',
         },
         {
             number: '04',
-            title: 'توسيع شبكة التعاون والشراكات',
+            title: t('about.objective4'),
             icon: TrendingUp,
             color: 'bg-amber-700',
             textColor: 'text-amber-700',
@@ -93,10 +95,10 @@ function AboutPage() {
                         className="max-w-7xl mx-auto text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-4">
-                            هويتنا ورؤيتنا
+                            {t('about.title')}
                         </h1>
                         <p className="text-xl md:text-2xl text-primary font-semibold">
-                            من نحن وإلى أين نتجه
+                            {t('about.subtitle')}
                         </p>
                     </motion.div>
                 </section>
@@ -113,10 +115,10 @@ function AboutPage() {
                             className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-r-8 border-cyan-400"
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <h2 className="text-3xl md:text-4xl font-bold text-cyan-600">من نحن؟</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold text-cyan-600">{t('about.whoWeAre')}</h2>
                             </div>
                             <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-right">
-                                جمعية الهادف للتنمية والتعاون، منصة شبابية معبرة تأسست في قلب مدينة أسفي، انطلاقا من إيمان عميق بأن التغيير الإيجابي يبدأ من طاقة الشباب أنفسهم. لم تكن انطلاقتنا مجرد فكرة، بل كانت استجابة لحاجة حقيقية في مجتمعنا: الحاجة إلى فضاء آمن ومحفز يجمع الشباب، يستثمر في مواهبهم، ويوجه طاقاتهم الإبداعية لخدمة محيطهم.
+                                {t('about.whoWeAreContent')}
                             </p>
                         </motion.div>
 
@@ -129,10 +131,10 @@ function AboutPage() {
                             className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-r-8 border-green-400"
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <h2 className="text-3xl md:text-4xl font-bold text-green-600">رؤيتنا</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold text-green-600">{t('about.vision')}</h2>
                             </div>
                             <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-right">
-                                نطمح إلى أن يصبح الشباب هم المحرك الأساسي للتنمية المستدامة والتغيير الإيجابي.
+                                {t('about.visionContent')}
                             </p>
                         </motion.div>
 
@@ -145,10 +147,10 @@ function AboutPage() {
                             className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-r-8 border-blue-400"
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <h2 className="text-3xl md:text-4xl font-bold text-blue-600">رسالتنا</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold text-blue-600">{t('about.mission')}</h2>
                             </div>
                             <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-right">
-                                تمكين شباب منطقتنا متنوعة قادراتهم، من خلال تصميم وتنفيذ برامج ومبادرات نوعية في المجالات التربوية، الثقافية، والرياضية. نعمل على تعزيز روح المواطنة والتطوع، وبناء شراكات فاعلة مع مختلف مكونات المجتمع للمساهمة في تحقيق تنمية محلية شاملة ومستدامة.
+                                {t('about.missionContent')}
                             </p>
                         </motion.div>
                     </div>
@@ -164,8 +166,8 @@ function AboutPage() {
                             transition={{ duration: 0.6 }}
                             className="text-center mb-12"
                         >
-                            <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4">قيمنا</h2>
-                            <p className="text-xl text-gray-600">القيم التي توجه عملنا</p>
+                            <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4">{t('about.values')}</h2>
+                            <p className="text-xl text-gray-600">{t('about.valuesSubtitle')}</p>
                         </motion.div>
 
                         <motion.div
@@ -205,8 +207,8 @@ function AboutPage() {
                             transition={{ duration: 0.6 }}
                             className="text-center mb-12"
                         >
-                            <h2 className="text-2xl md:text-5xl font-bold text-secondary mb-4">أهدافنا</h2>
-                            <p className="text-base md:text-xl text-gray-600">نسعى من خلال عملنا إلى تحقيق:</p>
+                            <h2 className="text-2xl md:text-5xl font-bold text-secondary mb-4">{t('about.objectives')}</h2>
+                            <p className="text-base md:text-xl text-gray-600">{t('about.objectivesSubtitle')}</p>
                         </motion.div>
 
                         <motion.div
@@ -228,7 +230,7 @@ function AboutPage() {
                                         <div className="flex items-center">
                                             {/* Number Circle */}
                                             <div className={`${objective.color} text-white px-4 py-6 md:px-8 md:py-12 flex items-center justify-center flex-shrink-0`}>
-                                                <span className="text-2xl md:text-5xl font-bold">{objective.number}</span>
+                                                <span className="text-2xl md:text-5xl font-bold latin-numbers">{objective.number}</span>
                                             </div>
 
                                             {/* Content */}

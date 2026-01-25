@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { Camera, Star, Heart, Trophy, Users, Palette, BookOpen, Monitor, Sparkles } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function AchievementsPage() {
+    const { t } = useTranslation()
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -53,16 +55,16 @@ function AchievementsPage() {
                         </div>
                     </div>
                     <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6 font-primary">
-                        إنجازاتنا على أرض الواقع
+                        {t('achievements.title')}
                     </h1>
                     <div className="w-32 h-2 bg-gradient-to-r from-green-400 to-blue-500 mx-auto rounded-full mb-8"></div>
 
                     <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-gray-100">
                         <p className="text-2xl text-gray-800 font-semibold mb-4 leading-relaxed">
-                            لأننا نؤمن بأن الأثر الحقيقي يُرى ولا يُحكى، ندعوكم لتصفح معرض صور لأبرز أنشطتنا ومبادراتنا.
+                            {t('achievements.subtitle1')}
                         </p>
                         <p className="text-xl text-gray-600 leading-relaxed">
-                            كل صورة هنا تروي حكاية نجاح، وكل بسمة هي شهادة على التزامنا، وكل إنجاز هو ثمرة عمل جماعي وتفانٍ لا حدود له.
+                            {t('achievements.subtitle2')}
                         </p>
                     </div>
                 </motion.div>
@@ -77,8 +79,8 @@ function AchievementsPage() {
                 >
                     <div className="flex items-center justify-end gap-4 mb-12">
                         <div className="text-right">
-                            <h2 className="text-4xl font-bold text-orange-500 mb-2">حملات "حيي مسؤوليتي"</h2>
-                            <p className="text-xl text-gray-600">للنظافة والتزيين والعناية بالبيئة</p>
+                            <h2 className="text-4xl font-bold text-orange-500 mb-2">{t('achievements.section1Title')}</h2>
+                            <p className="text-xl text-gray-600">{t('achievements.section1Subtitle')}</p>
                         </div>
                         <div className="bg-orange-100 p-3 rounded-2xl">
                             <Sparkles className="w-10 h-10 text-orange-500" />
@@ -130,8 +132,8 @@ function AchievementsPage() {
                 >
                     <div className="flex flex-row-reverse items-center justify-end gap-4 mb-12">
                         <div className="text-left">
-                            <h2 className="text-4xl font-bold text-blue-600 mb-2">مهارات وتشجيع المعرفة</h2>
-                            <p className="text-xl text-gray-600">التكوين الرقمي وبرامج القراءة</p>
+                            <h2 className="text-4xl font-bold text-blue-600 mb-2">{t('achievements.section2Title')}</h2>
+                            <p className="text-xl text-gray-600">{t('achievements.section2Subtitle')}</p>
                         </div>
                         <div className="bg-blue-100 p-3 rounded-2xl">
                             <Monitor className="w-10 h-10 text-blue-600" />
@@ -188,8 +190,8 @@ function AchievementsPage() {
                     <div className="flex items-center justify-center gap-4 mb-16">
                         <div className="h-1 flex-1 bg-gradient-to-l from-transparent to-pink-200"></div>
                         <div className="text-center">
-                            <h2 className="text-4xl font-bold text-pink-500 mb-2">مواكبة وتأطير الأطفال</h2>
-                            <p className="text-xl text-gray-600">ورشات فنية، مسرح، وإبداع</p>
+                            <h2 className="text-4xl font-bold text-pink-500 mb-2">{t('achievements.section3Title')}</h2>
+                            <p className="text-xl text-gray-600">{t('achievements.section3Subtitle')}</p>
                         </div>
                         <div className="bg-pink-100 p-3 rounded-2xl">
                             <Palette className="w-10 h-10 text-pink-500" />
@@ -241,12 +243,12 @@ function AchievementsPage() {
                         <Users className="w-64 h-64 text-primary" />
                     </div>
                     <div className="relative z-10">
-                        <h3 className="text-3xl md:text-4xl font-bold text-primary mb-6">كن جزءاً من قصة نجاحنا القادمة</h3>
+                        <h3 className="text-3xl md:text-4xl font-bold text-primary mb-6">{t('achievements.ctaTitle')}</h3>
                         <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-                            أبواب الجمعية مفتوحة دائماً للمتطوعين، المساهمين، والشركاء. انضم إلينا لنصنع الفرق معاً.
+                            {t('achievements.ctaDesc')}
                         </p>
                         <button className="bg-primary text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                            انضم إلينا الآن
+                            {t('achievements.ctaButton')}
                         </button>
                     </div>
                 </motion.div>

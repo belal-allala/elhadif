@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion'
 import { Globe, Landmark, GraduationCap, HandHeart, Users, Dumbbell, Cloud, Leaf, Recycle, TreePine, BookOpen, School, Backpack, Heart, Gift, UserPlus, Trophy, Gamepad2, Footprints, Palette, Mic, Scroll, Truck, HeartHandshake, Goal, PartyPopper } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function Axes() {
+    const { t } = useTranslation()
+    
     const workDomains = [
         {
             number: '01',
-            title: 'البيئة والتنمية المستدامة',
+            title: t('axes.axis1'),
             icon: Globe,
             accentColor: '#2AD1E3',
             mainColor: '#0A3D46',
@@ -14,7 +17,7 @@ function Axes() {
         },
         {
             number: '02',
-            title: 'الثقافة والتراث',
+            title: t('axes.axis2'),
             icon: Landmark,
             accentColor: '#8C52FF',
             mainColor: '#0A3D46',
@@ -23,7 +26,7 @@ function Axes() {
         },
         {
             number: '03',
-            title: 'التربية والتعليم',
+            title: t('axes.axis3'),
             icon: GraduationCap,
             accentColor: '#FF914D',
             mainColor: '#0A3D46',
@@ -32,7 +35,7 @@ function Axes() {
         },
         {
             number: '04',
-            title: 'العمل التطوعي وبناء القدرات',
+            title: t('axes.axis4'),
             icon: HandHeart,
             accentColor: '#7ED957',
             mainColor: '#0A3D46',
@@ -41,7 +44,7 @@ function Axes() {
         },
         {
             number: '05',
-            title: 'التنمية الاجتماعية',
+            title: t('axes.axis5'),
             icon: Users,
             accentColor: '#8C52FF',
             mainColor: '#0A3D46',
@@ -50,7 +53,7 @@ function Axes() {
         },
         {
             number: '06',
-            title: 'الرياضة والترفيه',
+            title: t('axes.axis6'),
             icon: Dumbbell,
             accentColor: '#FF914D',
             mainColor: '#0A3D46',
@@ -61,15 +64,15 @@ function Axes() {
 
     const environmentalPrograms = [
         {
-            title: 'حملات النظافة والتشجير',
-            description: 'نعمل بشكل مباشر على تحسين جمالية منطقتنا عبر مبادرات ميدانية تعزز الوعي وتحدث أثراً ملموساً في المجتمع.',
+            title: t('axes.axis1Program1Title'),
+            description: t('axes.axis1Program1Desc'),
             icon: Recycle,
             image: '/doc/474058605_530026146759115_7759097212140950000_n.jpg',
             color: 'border-green-500',
         },
         {
-            title: 'برامج التوعية البيئية',
-            description: 'نسعى إلى بناء جيل واع بيئياً قادر على تبني سلوكيات مستدامة تحافظ على الطبيعة وتدعم مستقبلاً أكثر خضرة.',
+            title: t('axes.axis1Program2Title'),
+            description: t('axes.axis1Program2Desc'),
             icon: TreePine,
             image: '/doc/487051105_577594808668915_6503870267768049242_n.jpg',
             color: 'border-green-500',
@@ -128,10 +131,10 @@ function Axes() {
                         className="max-w-7xl mx-auto text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
-                            مجالات عملنا وبرامجنا
+                            {t('axes.title')}
                         </h1>
                         <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                            ترجمة لرؤيتنا ورسالتنا على أرض الواقع، نظم أنشطتنا وبرامجنا ضمن ستة محاور عمل متكاملة ومترابطة. كل محور مصمم بعناية لتلبية احتياجات محددة في مجتمعنا، وضمان تحقيق أثر إيجابي، عميق، ومستدام.
+                            {t('axes.subtitle')}
                         </p>
                     </motion.div>
                 </section>
@@ -147,7 +150,7 @@ function Axes() {
                         <div className="relative">
                             <Cloud className="w-full h-48 text-cyan-400 opacity-20" strokeWidth={1} />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <h2 className="text-3xl md:text-4xl font-bold text-green-500">محاور عملنا</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold text-green-500">{t('axes.workAxes')}</h2>
                             </div>
                         </div>
                     </motion.div>
@@ -183,7 +186,7 @@ function Axes() {
                                         >
                                             {/* Gold Number Badge */}
                                             <div
-                                                className="absolute top-[clamp(0.75rem,2vw,1.25rem)] right-[clamp(0.75rem,2vw,1.25rem)] rounded-full flex items-center justify-center font-bold shadow-xl transition-transform duration-300 group-hover:scale-110"
+                                                className="absolute top-[clamp(0.75rem,2vw,1.25rem)] right-[clamp(0.75rem,2vw,1.25rem)] rounded-full flex items-center justify-center font-bold shadow-xl transition-transform duration-300 group-hover:scale-110 latin-numbers"
                                                 style={{
                                                     width: 'clamp(3rem,7vw,4.5rem)',
                                                     height: 'clamp(3rem,7vw,4.5rem)',
@@ -329,7 +332,7 @@ function Axes() {
                                     textShadow: '0 clamp(0.125rem,0.3vw,0.25rem) clamp(0.25rem,0.5vw,0.5rem) #2AD1E330'
                                 }}
                             >
-                                محور البيئة والتنمية المستدامة
+                                {t('axes.axis1')}
                             </h2>
                             <p
                                 className="leading-relaxed max-w-[clamp(18rem,85vw,64rem)] mx-auto mb-[clamp(0.75rem,2vw,1.25rem)]"
@@ -338,7 +341,7 @@ function Axes() {
                                     color: '#0A3D46'
                                 }}
                             >
-                                يبقتنا مسؤوليتنا... نحميها اليوم لنتركم للأجيال القادمة
+                                {t('axes.axis1Motto')}
                             </p>
                             <p
                                 className="leading-relaxed max-w-[clamp(18rem,85vw,64rem)] mx-auto mt-[clamp(0.75rem,2vw,1.25rem)]"
@@ -348,7 +351,7 @@ function Axes() {
                                     opacity: 0.8
                                 }}
                             >
-                                نؤمن بأن التنمية لا تكتمل إلا في بيئة نظيفة وصحية. إن الحفاظ على محيطنا الطبيعي ليس مجرد خيار، بل هو واجب أخلاقي ومسؤولية جماعية تجاه أنفسنا وتجاه الأجيال القادمة. لذلك، تطرح جمعية الهادف برسخ الوعي البيئي لدى الشباب، وتحويلهم من مجرد سكان إلى حماة فاعلين ومدافعين عن بيئتهم.
+                                {t('axes.axis1Desc')}
                             </p>
                         </motion.div>
 
@@ -562,7 +565,7 @@ function Axes() {
                                     letterSpacing: "-0.02em",
                                 }}
                             >
-                                محور الثقافة والتراث
+                                {t('axes.axis2')}
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 15 }}
@@ -578,7 +581,7 @@ function Axes() {
                                     letterSpacing: "-0.01em",
                                 }}
                             >
-                                ثقافتنا هويتنا... بها نعتز ومنها نستلهم إبداعنا
+                                {t('axes.axis2Motto')}
                             </motion.p>
                             <motion.p
                                 initial={{ opacity: 0, y: 15 }}
@@ -594,7 +597,7 @@ function Axes() {
                                     fontWeight: 400,
                                 }}
                             >
-                                نرى في الثقافة والتراث نافذة يطل منها الشباب على تاريخهم وجذورهم، ومصدراً غنياً للإلهام والإبداع. لذلك، نعمل في جمعية الهادف على خلق فضاءات ثقافية حية تسمح للشباب بالتعبير عن أنفسهم، وتعميق معرفتهم بتراثهم المحلي والوطني، والمساهمة في إنتاج مشهد ثقافي متنوع ومبتكر.
+                                {t('axes.axis2Desc')}
                             </motion.p>
                         </motion.div>
                         {/* Program Cards */}
@@ -632,7 +635,7 @@ function Axes() {
                                                 letterSpacing: "-0.01em",
                                             }}
                                         >
-                                            الورشات والنوادي الإبداعية
+                                            {t('axes.axis2Program1Title')}
                                         </h3>
                                         <p
                                             className="leading-relaxed"
@@ -644,7 +647,7 @@ function Axes() {
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            نوفر للشباب والمواهب الناشئة منصة لتنمية مهاراتهم الفنية والأدبية.
+                                            {t('axes.axis2Program1Desc')}
                                         </p>
                                     </div>
                                     <div className="flex-shrink-0 order-1 md:order-2 relative z-10">
@@ -699,7 +702,7 @@ function Axes() {
                                                 letterSpacing: "-0.01em",
                                             }}
                                         >
-                                            الندوات والفعاليات الثقافية
+                                            {t('axes.axis2Program2Title')}
                                         </h3>
                                         <p
                                             className="leading-relaxed"
@@ -711,7 +714,7 @@ function Axes() {
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            نساهم في إثراء الحوار الفكري والمعرفي في منطقتنا.
+                                            {t('axes.axis2Program2Desc')}
                                         </p>
                                     </div>
                                     <div className="flex-shrink-0 order-1 md:order-2 relative z-10">
@@ -766,7 +769,7 @@ function Axes() {
                                                 letterSpacing: "-0.01em",
                                             }}
                                         >
-                                            إحياء التراث المحلي والتعريف به
+                                            {t('axes.axis2Program3Title')}
                                         </h3>
                                         <p
                                             className="leading-relaxed"
@@ -778,7 +781,7 @@ function Axes() {
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            نعمل على تقوية ارتباط الشباب بجذورهم وتاريخهم.
+                                            {t('axes.axis2Program3Desc')}
                                         </p>
                                     </div>
                                     <div className="flex-shrink-0 order-1 md:order-2 relative z-10">
@@ -822,14 +825,14 @@ function Axes() {
                             className="mb-12"
                         >
                             <h2 className="text-4xl md:text-5xl font-bold text-[#FF914D] mb-4 text-right">
-                                محور التربية والتعليم
+                                {t('axes.axis3')}
                             </h2>
                             <div className="w-full h-1 bg-white/10 mb-6"></div>
                             <p className="text-2xl md:text-3xl text-white font-semibold mb-6 text-right">
-                                بالعلم والمعرفة، نبني جيلاً قادراً على صنع المستقبل
+                                {t('axes.axis3Motto')}
                             </p>
                             <p className="text-base md:text-lg text-gray-200 leading-relaxed text-right">
-                                نؤمن في جمعية الهادف بأن التعليم هو حجر الزاوية في أي مشروع تنموي حقيقي. لذلك، نضع محور التربية والتعليم في صميم استراتيجيتنا، ونسعى من خلاله إلى توفير فرص متكافئة للجميع، ومحاربة الهدر المدرسي، وتزويد الشباب بالأدوات المعرفية التي تمكنهم من تحقيق طموحاتهم.
+                                {t('axes.axis3Desc')}
                             </p>
                         </motion.div>
 
@@ -860,10 +863,10 @@ function Axes() {
                                     className="bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-r-4 border-[#FF914D]"
                                 >
                                     <h3 className="text-xl md:text-2xl font-bold text-[#0A3D46] mb-3 text-right">
-                                        برنامج دعم التمدرس
+                                        {t('axes.axis3Program1Title')}
                                     </h3>
                                     <p className="text-base text-gray-600 leading-relaxed text-right">
-                                        يهدف هذا البرنامج إلى تقديم المساعدة المباشرة للتلاميذ الذين يواجهون صعوبات دراسية.
+                                        {t('axes.axis3Program1Desc')}
                                     </p>
                                 </motion.div>
 
@@ -876,10 +879,10 @@ function Axes() {
                                     className="bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-r-4 border-[#FF914D]"
                                 >
                                     <h3 className="text-xl md:text-2xl font-bold text-[#0A3D46] mb-3 text-right">
-                                        برنامج محو الأمية وتعزيز المهارات
+                                        {t('axes.axis3Program2Title')}
                                     </h3>
                                     <p className="text-base text-gray-600 leading-relaxed text-right">
-                                        إيماناً منا بأن التعلم حق للجميع وفي كل الأعمار، يستهدف هذا البرنامج فئة الشباب والناشئين المنقطعين عن الدراسة.
+                                        {t('axes.axis3Program2Desc')}
                                     </p>
                                 </motion.div>
 
@@ -892,10 +895,10 @@ function Axes() {
                                     className="bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-r-4 border-[#FF914D]"
                                 >
                                     <h3 className="text-xl md:text-2xl font-bold text-[#0A3D46] mb-3 text-right">
-                                        برنامج التوجيه المدرسي والجامعي
+                                        {t('axes.axis3Program3Title')}
                                     </h3>
                                     <p className="text-base text-gray-600 leading-relaxed text-right">
-                                        نساعد الشباب في مرحلة اتخاذ القرارات المصيرية المتعلقة بمسارهم الدراسي والمهني.
+                                        {t('axes.axis3Program3Desc')}
                                     </p>
                                 </motion.div>
                             </motion.div>
@@ -910,10 +913,10 @@ function Axes() {
                             className="mt-20 text-center"
                         >
                             <h3 className="text-3xl md:text-4xl font-bold text-[#FF914D] mb-8">
-                                الأثر المتوقع
+                                {t('axes.axis3ImpactTitle')}
                             </h3>
                             <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto border-t border-white/10 pt-8">
-                                الحد من الهدر المدرسي، تحسين النتائج الدراسية، وتمكين جيل من الشباب الواعي والقادر على اتخاذ قرارات مستنيرة لمستقبله.
+                                {t('axes.axis3ImpactDesc')}
                             </p>
                         </motion.div>
                     </div>
@@ -941,14 +944,14 @@ function Axes() {
                             </div>
 
                             <h2 className="text-4xl md:text-5xl font-bold text-[#FF914D] mb-6">
-                                محور العمل التطوعي وبناء القدرات
+                                {t('axes.axis4')}
                             </h2>
                             <p className="text-2xl md:text-3xl text-[#0A3D46] font-semibold mb-8">
-                                نستثمر في الإنسان... لنصنع قادة التغيير
+                                {t('axes.axis4Motto')}
                             </p>
                             <div className="max-w-4xl mx-auto">
                                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                                    نؤمن بأن المتطوعين ليسوا مجرد أيد عاملة، بل هم قلب الجمعية النابض وروحها المتجددة. لذلك، لا تكتفي بدعوتهم للمشاركة، بل نطمح بالاستثمار فيهم وتزويدهم بالمهارات والمعارف التي تجعل منهم قادة فاعلين في مجتمعهم. هذا المحور هو المحرك الذي يغذي جميع محاور عملنا الأخرى وينفض استمراريتها وتطورها.
+                                    {t('axes.axis4Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -969,11 +972,11 @@ function Axes() {
                                             <UserPlus className="w-8 h-8 text-[#FF914D]" />
                                         </div>
                                         <h3 className="text-2xl md:text-3xl font-bold text-white">
-                                            تكوين المتطوعين وتنمية المهارات
+                                            {t('axes.axis4Program1Title')}
                                         </h3>
                                     </div>
                                     <p className="text-lg text-gray-200 leading-relaxed flex-grow">
-                                        نحرص على أن يكون كل متطوع في جمعية الهادف سفيرًا لقضيتنا ومؤهلاً لأداء مهامه بكفاءة وروح مسؤولية عالية.
+                                        {t('axes.axis4Program1Desc')}
                                     </p>
                                 </div>
                             </motion.div>
@@ -992,11 +995,11 @@ function Axes() {
                                             <Users className="w-8 h-8 text-[#FF914D]" />
                                         </div>
                                         <h3 className="text-2xl md:text-3xl font-bold text-white">
-                                            تطوير الريادة الجمعوية
+                                            {t('axes.axis4Program2Title')}
                                         </h3>
                                     </div>
                                     <p className="text-lg text-gray-200 leading-relaxed flex-grow">
-                                        نسعى لتمكين الشباب الطموح، ليصبحوا قادرين على إطلاق مبادراتهم الخاصة وإدارتها بثقة وكفاءة في المستقبل.
+                                        {t('axes.axis4Program2Desc')}
                                     </p>
                                 </div>
                             </motion.div>
@@ -1025,14 +1028,14 @@ function Axes() {
                             </div>
 
                             <h2 className="text-4xl md:text-5xl font-bold text-[#FF914D] mb-6">
-                                محور التنمية الاجتماعية
+                                {t('axes.axis5')}
                             </h2>
                             <p className="text-2xl md:text-3xl text-white font-semibold mb-8">
-                                تضامننا قوة... بها نرسم البسمة ونخفف المعاناة
+                                {t('axes.axis5Motto')}
                             </p>
                             <div className="max-w-4xl mx-auto">
                                 <p className="text-base md:text-lg text-gray-200 leading-relaxed">
-                                    لأن التنمية الحقيقية لا تكتمل دون تحقيق التضامن الاجتماعي، نضع العمل الاجتماعي والإنساني في مقدمة أولوياتنا في جمعية الهادف. نؤمن بأن واجبنا يمتد إلى الوقوف بجانب الفئات الأكثر حاجة في مجتمعنا، ومد يد العون لهم، وإرساء ثقافة العطاء والتضامن بين جميع مكونات المنطقة.
+                                    {t('axes.axis5Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -1052,10 +1055,10 @@ function Axes() {
                                         <Truck className="w-12 h-12 text-[#0A3D46]" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-[#0A3D46] mb-4">
-                                        القوافل الخيرية والتضامنية
+                                        {t('axes.axis5Program1Title')}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed flex-grow">
-                                        نسعى للوصول إلى المناطق النائية والأسر التي تحتاج إلى دعم عاجل من خلال تنظيم قوافل إنسانية منتظمة.
+                                        {t('axes.axis5Program1Desc')}
                                     </p>
                                 </div>
                             </motion.div>
@@ -1073,10 +1076,10 @@ function Axes() {
                                         <HeartHandshake className="w-12 h-12 text-[#0A3D46]" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-[#0A3D46] mb-4">
-                                        دعم الأسر المعوزة
+                                        {t('axes.axis5Program2Title')}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed flex-grow">
-                                        نعمل على تقديم دعم مستمر ومنظم للأسر محدودة الدخل والأيتام لضمان حياة كريمة لهم.
+                                        {t('axes.axis5Program2Desc')}
                                     </p>
                                 </div>
                             </motion.div>
@@ -1094,10 +1097,10 @@ function Axes() {
                                         <Gift className="w-12 h-12 text-[#0A3D46]" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-[#0A3D46] mb-4">
-                                        مبادرات إنسانية موسمية
+                                        {t('axes.axis5Program3Title')}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed flex-grow">
-                                        نستجيب لاحتياجات مجتمعنا ونطلق حملات ومبادرات إنسانية خاصة حسب الموسم والحاجات الطارئة.
+                                        {t('axes.axis5Program3Desc')}
                                     </p>
                                 </div>
                             </motion.div>
@@ -1127,14 +1130,14 @@ function Axes() {
                             </div>
 
                             <h2 className="text-4xl md:text-5xl font-bold text-[#FF914D] mb-6">
-                                محور الرياضة والترفيه
+                                {t('axes.axis6')}
                             </h2>
                             <p className="text-2xl md:text-3xl text-[#0A3D46] font-semibold mb-8">
-                                بالرياضة نصنع الأبطال... ونبني مجتمعاً حيوياً وإيجابياً
+                                {t('axes.axis6Motto')}
                             </p>
                             <div className="max-w-4xl mx-auto">
                                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                                    نؤمن في جمعية الهادف بأن الرياضة ليست مجرد نشاط بدني، بل هي مدرسة حياة حقيقية يتعلم فيها الشباب قيماً أساسية كالصبر، الاحترام، روح الفريق، والمنافسة الشريفة. من خلال محور الرياضة والترفيه، نسعى إلى خلق فضاءات رياضية وترفيهية تسمح للشباب بممارسة هواياتهم، اكتشاف مواهبهم، وتطوير شخصياتهم في بيئة صحية ومحفزة.
+                                    {t('axes.axis6Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -1157,10 +1160,10 @@ function Axes() {
                                         </div>
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-bold text-[#0A3D46] mb-2">
-                                                الدوريات الرياضية المنظمة
+                                                {t('axes.axis6Program1Title')}
                                             </h3>
                                             <p className="text-gray-600 leading-relaxed">
-                                                ننظم دوريات رياضية منتظمة في مختلف الرياضات، بهدف خلق منافسة نبيلة تسمح للشباب بإظهار مواهبهم، تطوير مهاراتهم، واكتساب قيم العمل الجماعي والانضباط.
+                                                {t('axes.axis6Program1Desc')}
                                             </p>
                                         </div>
                                     </div>
@@ -1180,10 +1183,10 @@ function Axes() {
                                         </div>
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-bold text-[#0A3D46] mb-2">
-                                                الأيام الترفيهية المفتوحة
+                                                {t('axes.axis6Program2Title')}
                                             </h3>
                                             <p className="text-gray-600 leading-relaxed">
-                                                ننظم أياماً ترفيهية مفتوحة للأطفال والشباب، مليئة بالأنشطة والألعاب التي تجمع بين المتعة والتعلم. نؤمن بأن اللعب هو وسيلة طبيعية لتطوير المهارات الاجتماعية والإبداعية.
+                                                {t('axes.axis6Program2Desc')}
                                             </p>
                                         </div>
                                     </div>
@@ -1203,10 +1206,10 @@ function Axes() {
                                         </div>
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-bold text-[#0A3D46] mb-2">
-                                                نشر الثقافة الرياضية
+                                                {t('axes.axis6Program3Title')}
                                             </h3>
                                             <p className="text-gray-600 leading-relaxed">
-                                                نسعى إلى نشر ثقافة رياضية إيجابية، من خلال ورشات توعوية وأنشطة تبرز أهمية الرياضة كأسلوب حياة صحي ومصدر للطاقة الإيجابية.
+                                                {t('axes.axis6Program3Desc')}
                                             </p>
                                         </div>
                                     </div>
@@ -1269,10 +1272,10 @@ function Axes() {
                             transition={{ duration: 0.6 }}
                         >
                             <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D46] mb-6">
-                                نحو تنمية شاملة ومستدامة
+                                {t('axes.forward')}
                             </h2>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                                من خلال هذه المحاور الستة، نسعى إلى بناء مجتمع متماسك، واعٍ، ومبدع. نؤمن بأن التنمية الحقيقية تبدأ من الشباب، وأن كل مجال من هذه المجالات يساهم في تشكيل مستقبل أفضل لمنطقتنا ووطننا.
+                                {t('axes.forwardDesc')}
                             </p>
                         </motion.div>
                     </div>

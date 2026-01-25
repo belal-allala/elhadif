@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Building2, MessageCircle } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function Contact() {
+    const { t } = useTranslation()
     return (
         <section id="contact" className="relative py-20 bg-white overflow-hidden">
             {/* Motifs hexagonaux décoratifs */}
@@ -27,23 +29,22 @@ function Contact() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-                        كلمة شكر وتقدير
+                        {t('contact.thanksTitle')}
                     </h2>
                     <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
 
                     <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
                         <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                            نتقدم بجزيل الشكر والامتنان لكل من ساهم في دعم مسيرتنا، من شركاء ومانحين ومتطوعين.
-                            بفضل تضافر جهودكم، نواصل تحقيق أهدافنا في خدمة المجتمع وتمكين الشباب.
+                            {t('contact.thanks1')}
                         </p>
                         <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                            شكراً لكل من آمن برؤيتنا ووقف إلى جانبنا في رحلة التنمية والتغيير الإيجابي.
+                            {t('contact.thanks2')}
                         </p>
 
                         {/* Signature */}
                         <div className="pt-6 border-t-2 border-primary/20">
                             <p className="text-3xl md:text-4xl font-bold text-primary">
-                                #كلنا_الهادف
+                                {t('contact.hashtag')}
                             </p>
                         </div>
                     </div>
@@ -57,14 +58,14 @@ function Contact() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <h3 className="text-3xl md:text-4xl font-bold text-secondary text-center mb-12">
-                        تواصل معنا
+                        {t('contact.title')}
                     </h3>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Coordonnées de contact - À droite en RTL */}
                         <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                             <h4 className="text-2xl font-bold text-secondary mb-6">
-                                معلومات الاتصال
+                                {t('contact.contactInfo')}
                             </h4>
 
                             <div className="space-y-6">
@@ -73,12 +74,12 @@ function Contact() {
                                         <Phone className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-gray-900 mb-1">الهاتف:</p>
+                                        <p className="font-semibold text-gray-900 mb-1">{t('contact.phone')}:</p>
                                         <a
                                             href="tel:+212637167401"
-                                            className="text-gray-700 hover:text-primary transition-colors"
+                                            className="text-gray-700 hover:text-primary transition-colors phone-number"
                                         >
-                                            <span lang="fr">+212 637-167401</span>
+                                            <span lang="fr" className="latin-numbers">+212 637-167401</span>
                                         </a>
                                     </div>
                                 </div>
@@ -88,7 +89,7 @@ function Contact() {
                                         <Mail className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-gray-900 mb-1">البريد الإلكتروني:</p>
+                                        <p className="font-semibold text-gray-900 mb-1">{t('contact.email')}:</p>
                                         <a
                                             href="mailto:associationelhadef@gmail.com"
                                             className="text-gray-700 hover:text-primary transition-colors break-all"
@@ -103,10 +104,10 @@ function Contact() {
                                         <MapPin className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-gray-900 mb-1">العنوان:</p>
+                                        <p className="font-semibold text-gray-900 mb-1">{t('contact.address')}:</p>
                                         <p className="text-gray-700">
-                                            Dar Echabab Jraifat<br />
-                                            Safi, Maroc
+                                            {t('contact.addressValue')}<br />
+                                            {t('contact.addressCity')}
                                         </p>
                                     </div>
                                 </div>
@@ -120,7 +121,7 @@ function Contact() {
                                 className="mt-8 w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-md hover:shadow-lg"
                             >
                                 <MessageCircle className="w-5 h-5" />
-                                تواصل معنا عبر واتساب
+                                {t('contact.whatsapp')}
                             </a>
                         </div>
 
@@ -128,47 +129,47 @@ function Contact() {
                         <div className="bg-gradient-to-br from-accent to-accent-dark rounded-2xl p-8 shadow-xl text-white">
                             <h4 className="text-2xl font-bold mb-6 flex items-center gap-3">
                                 <Building2 className="w-7 h-7" />
-                                فضاء التبرع
+                                {t('contact.donationSpace')}
                             </h4>
 
                             <p className="text-white/90 mb-6 leading-relaxed">
-                                ساهم في دعم مشاريعنا وأنشطتنا من خلال التبرع عبر الحساب البنكي التالي:
+                                {t('contact.donationDesc')}
                             </p>
 
                             <div className="space-y-4">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <p className="text-sm text-white/80 mb-1">صاحب الحساب:</p>
+                                    <p className="text-sm text-white/80 mb-1">{t('contact.accountHolder')}:</p>
                                     <p className="font-bold text-lg">EL HADEF</p>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <p className="text-sm text-white/80 mb-1">البنك:</p>
-                                    <p className="font-bold">Banque Populaire</p>
+                                    <p className="text-sm text-white/80 mb-1">{t('contact.bank')}:</p>
+                                    <p className="font-bold">{t('contact.bankName')}</p>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <p className="text-sm text-white/80 mb-1">RIB:</p>
-                                    <p className="font-mono text-sm md:text-base font-semibold break-all">
-                                        <span lang="fr">230 780 2121172205730001 75</span>
+                                    <p className="text-sm text-white/80 mb-1">{t('contact.rib')}:</p>
+                                    <p className="font-mono text-sm md:text-base font-semibold break-all rib-number">
+                                        <span lang="fr" className="latin-numbers">230 780 2121172205730001 75</span>
                                     </p>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <p className="text-sm text-white/80 mb-1">IBAN:</p>
-                                    <p className="font-mono text-sm md:text-base font-semibold break-all">
-                                        <span lang="fr">MA64 230 780 2121172205730001 75</span>
+                                    <p className="text-sm text-white/80 mb-1">{t('contact.iban')}:</p>
+                                    <p className="font-mono text-sm md:text-base font-semibold break-all iban-number">
+                                        <span lang="fr" className="latin-numbers">MA64 230 780 2121172205730001 75</span>
                                     </p>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <p className="text-sm text-white/80 mb-1">Code SWIFT:</p>
-                                    <p className="font-mono font-semibold">BCPOMAMC</p>
+                                    <p className="text-sm text-white/80 mb-1">{t('contact.swift')}:</p>
+                                    <p className="font-mono font-semibold latin-numbers">BCPOMAMC</p>
                                 </div>
                             </div>
 
                             <div className="mt-6 pt-6 border-t border-white/20">
                                 <p className="text-sm text-white/90 text-center">
-                                    كل مساهمة، مهما كانت صغيرة، تحدث فرقاً كبيراً
+                                    {t('contact.donationMessage')}
                                 </p>
                             </div>
                         </div>

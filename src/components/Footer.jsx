@@ -1,6 +1,8 @@
 import { Mail, Phone, MapPin, Building2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function Footer() {
+    const { t } = useTranslation()
     return (
         <footer className="bg-secondary text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -8,31 +10,31 @@ function Footer() {
                     {/* Section À propos */}
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-primary">
-                            جمعية الهادف للتنمية والتعاون
+                            {t('footer.about')}
                         </h3>
                         <p className="text-gray-300 leading-relaxed">
-                            جمعية تنموية تعاونية تهدف إلى تحسين الظروف الاجتماعية والاقتصادية للمجتمع المحلي من خلال مشاريع مستدامة ومبادرات تنموية.
+                            {t('footer.aboutDesc')}
                         </p>
                     </div>
 
                     {/* Section Contact */}
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-primary">
-                            اتصل بنا
+                            {t('footer.contact')}
                         </h3>
                         <div className="space-y-3">
                             <div className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-semibold">العنوان:</p>
-                                    <p className="text-gray-300">Dar Echabab Jraifat</p>
+                                    <p className="font-semibold">{t('contact.address')}:</p>
+                                    <p className="text-gray-300">{t('contact.addressValue')}</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-3">
                                 <Mail className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-semibold">البريد الإلكتروني:</p>
+                                    <p className="font-semibold">{t('contact.email')}:</p>
                                     <a
                                         href="mailto:associationelhadef@gmail.com"
                                         className="text-gray-300 hover:text-accent transition-colors"
@@ -45,12 +47,12 @@ function Footer() {
                             <div className="flex items-start gap-3">
                                 <Phone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-semibold">الهاتف:</p>
+                                    <p className="font-semibold">{t('contact.phone')}:</p>
                                     <a
                                         href="tel:+212637167401"
-                                        className="text-gray-300 hover:text-accent transition-colors"
+                                        className="text-gray-300 hover:text-accent transition-colors phone-number"
                                     >
-                                        <span lang="fr">+212 637-167401</span>
+                                        <span lang="fr" className="latin-numbers">+212 637-167401</span>
                                     </a>
                                 </div>
                             </div>
@@ -60,7 +62,7 @@ function Footer() {
                     {/* Section Dons */}
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-primary">
-                            معلومات التبرع
+                            {t('footer.donationInfo')}
                         </h3>
                         <div className="space-y-4">
                             <div className="bg-secondary-dark p-4 rounded-lg">
@@ -68,8 +70,8 @@ function Footer() {
                                     <Building2 className="h-5 w-5 text-accent" />
                                     <p className="font-semibold">RIB:</p>
                                 </div>
-                                <p className="text-gray-300 font-mono text-sm break-all">
-                                    <span lang="fr">230 780 2121172205730001 75</span>
+                                <p className="text-gray-300 font-mono text-sm break-all rib-number">
+                                    <span lang="fr" className="latin-numbers">230 780 2121172205730001 75</span>
                                 </p>
                             </div>
 
@@ -78,8 +80,8 @@ function Footer() {
                                     <Building2 className="h-5 w-5 text-accent" />
                                     <p className="font-semibold">IBAN:</p>
                                 </div>
-                                <p className="text-gray-300 font-mono text-sm break-all">
-                                    <span lang="fr">MA64 230 780 2121172205730001 75</span>
+                                <p className="text-gray-300 font-mono text-sm break-all iban-number">
+                                    <span lang="fr" className="latin-numbers">MA64 230 780 2121172205730001 75</span>
                                 </p>
                             </div>
                         </div>
@@ -89,7 +91,7 @@ function Footer() {
                 {/* Copyright */}
                 <div className="mt-8 pt-8 border-t border-secondary-light text-center">
                     <p className="text-gray-400">
-                        © {new Date().getFullYear()} جمعية الهادف للتنمية والتعاون. جميع الحقوق محفوظة.
+                        <span className="latin-numbers">© {new Date().getFullYear()}</span> {t('footer.about')}. {t('footer.copyright')}
                     </p>
                 </div>
             </div>
