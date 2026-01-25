@@ -78,7 +78,7 @@ function Contact() {
                                             href="tel:+212637167401"
                                             className="text-gray-700 hover:text-primary transition-colors"
                                         >
-                                            +212 637-167401
+                                            <span lang="fr">+212 637-167401</span>
                                         </a>
                                     </div>
                                 </div>
@@ -149,14 +149,14 @@ function Contact() {
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                                     <p className="text-sm text-white/80 mb-1">RIB:</p>
                                     <p className="font-mono text-sm md:text-base font-semibold break-all">
-                                        230 780 2121172205730001 75
+                                        <span lang="fr">230 780 2121172205730001 75</span>
                                     </p>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                                     <p className="text-sm text-white/80 mb-1">IBAN:</p>
                                     <p className="font-mono text-sm md:text-base font-semibold break-all">
-                                        MA64 230 780 2121172205730001 75
+                                        <span lang="fr">MA64 230 780 2121172205730001 75</span>
                                     </p>
                                 </div>
 

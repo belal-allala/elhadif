@@ -50,7 +50,7 @@ function Footer() {
                                         href="tel:+212637167401"
                                         className="text-gray-300 hover:text-accent transition-colors"
                                     >
-                                        +212 637-167401
+                                        <span lang="fr">+212 637-167401</span>
                                     </a>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ function Footer() {
                                     <p className="font-semibold">RIB:</p>
                                 </div>
                                 <p className="text-gray-300 font-mono text-sm break-all">
-                                    230 780 2121172205730001 75
+                                    <span lang="fr">230 780 2121172205730001 75</span>
                                 </p>
                             </div>
 
@@ -79,7 +79,7 @@ function Footer() {
                                     <p className="font-semibold">IBAN:</p>
                                 </div>
                                 <p className="text-gray-300 font-mono text-sm break-all">
-                                    MA64 230 780 2121172205730001 75
+                                    <span lang="fr">MA64 230 780 2121172205730001 75</span>
                                 </p>
                             </div>
                         </div>

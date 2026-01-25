@@ -64,14 +64,14 @@ function Axes() {
             title: 'حملات النظافة والتشجير',
             description: 'نعمل بشكل مباشر على تحسين جمالية منطقتنا عبر مبادرات ميدانية تعزز الوعي وتحدث أثراً ملموساً في المجتمع.',
             icon: Recycle,
-            image: '/doc/environmental_cleanup.png',
+            image: '/doc/474058605_530026146759115_7759097212140950000_n.jpg',
             color: 'border-green-500',
         },
         {
             title: 'برامج التوعية البيئية',
             description: 'نسعى إلى بناء جيل واع بيئياً قادر على تبني سلوكيات مستدامة تحافظ على الطبيعة وتدعم مستقبلاً أكثر خضرة.',
             icon: TreePine,
-            image: '/doc/environmental_awareness.png',
+            image: '/doc/487051105_577594808668915_6503870267768049242_n.jpg',
             color: 'border-green-500',
         },
     ]

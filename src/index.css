@@ -24,4 +24,7 @@
     @apply font-arabic;
     @apply text-gray-900;
   }
+  [lang="fr"] {
+    font-family: sans-serif;
+  }
 }

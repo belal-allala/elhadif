@@ -89,7 +89,7 @@ function AchievementsPage() {
                         {/* Photo 1: Painting Walls */}
                         <motion.div variants={photoVariants} whileHover="hover" className="bg-white p-3 shadow-lg rounded-sm transform -rotate-2">
                             <div className="aspect-[4/3] bg-gray-200 overflow-hidden mb-3">
-                                <img src="/doc/environmental_cleanup.png" alt="صباغة الجدران" className="w-full h-full object-cover" />
+                                <img src="/doc/474221359_529258863502510_8301961583081486289_n.jpg" alt="صباغة الجدران" className="w-full h-full object-cover" />
                             </div>
                             <p className="text-center font-handwriting text-lg text-gray-600">صباغة الجدران والجداريات</p>
                         </motion.div>
@@ -97,7 +97,7 @@ function AchievementsPage() {
                         {/* Photo 2: Cleaning */}
                         <motion.div variants={photoVariants} whileHover="hover" className="bg-white p-3 shadow-lg rounded-sm transform rotate-1 mt-8 md:mt-0">
                             <div className="aspect-[4/3] bg-gray-200 overflow-hidden mb-3">
-                                <img src="/doc/environmental_awareness.png" alt="حملات النظافة" className="w-full h-full object-cover" />
+                                <img src="/doc/474579187_529247773503619_3176517848621740742_n.jpg" alt="حملات النظافة" className="w-full h-full object-cover" />
                             </div>
                             <p className="text-center font-handwriting text-lg text-gray-600">تنظيف الشوارع والساحات</p>
                         </motion.div>
@@ -105,7 +105,7 @@ function AchievementsPage() {
                         {/* Photo 3: Garden Painting */}
                         <motion.div variants={photoVariants} whileHover="hover" className="bg-white p-3 shadow-lg rounded-sm transform -rotate-1">
                             <div className="aspect-[4/3] bg-gray-200 overflow-hidden mb-3">
-                                <img src="/doc/WhatsApp Image 2025-11-29 à 20.42.06_6771a9f0.jpg" alt="صباغة الأرصفة" className="w-full h-full object-cover" />
+                                <img src="/doc/474165704_529258100169253_3018369032961523509_n.jpg" alt="صباغة الأرصفة" className="w-full h-full object-cover" />
                             </div>
                             <p className="text-center font-handwriting text-lg text-gray-600">صباغة الأرصفة وتزيينها</p>
                         </motion.div>
@@ -113,7 +113,7 @@ function AchievementsPage() {
                         {/* Photo 4: Group Photo */}
                         <motion.div variants={photoVariants} whileHover="hover" className="bg-white p-3 shadow-lg rounded-sm transform rotate-2 mt-8 md:mt-0">
                             <div className="aspect-[4/3] bg-gray-200 overflow-hidden mb-3">
-                                <img src="/doc/WhatsApp Image 2025-11-29 à 20.42.05_7822e775.jpg" alt="فريق العمل" className="w-full h-full object-cover" />
+                                <img src="/doc/473544384_528675323560864_951026384474002252_n.jpg" alt="فريق العمل" className="w-full h-full object-cover" />
                             </div>
                             <p className="text-center font-handwriting text-lg text-gray-600">روح الفريق والتطوع</p>
                         </motion.div>
@@ -144,7 +144,7 @@ function AchievementsPage() {
                             <div className="w-full md:w-1/2">
                                 <h3 className="text-2xl font-bold text-blue-800 mb-4 bg-white/50 p-2 inline-block rounded-lg">شراكة YouCode</h3>
                                 <div className="bg-white p-2 shadow-sm rounded-xl transform rotate-1">
-                                    <img src="/doc/WhatsApp Image 2025-11-26 à 09.14.09_f5279ff7.jpg" alt="ورشات YouCode" className="rounded-lg w-full h-48 object-cover" />
+                                    <img src="/doc/WhatsApp Image 2025-11-29 à 20.42.05_7822e775.jpg" alt="ورشات YouCode" className="rounded-lg w-full h-48 object-cover" />
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 text-right">
@@ -166,7 +166,7 @@ function AchievementsPage() {
                             </div>
                             <div className="space-y-4">
                                 <div className="bg-white p-2 shadow-sm rounded-xl -rotate-1">
-                                    <img src="/doc/cultural_seminar.png" alt="ورشة القراءة" className="rounded-lg w-full h-40 object-cover" />
+                                    <img src="/doc/474149660_527221377039592_1104953780114307147_n.jpg" alt="ورشة القراءة" className="rounded-lg w-full h-40 object-cover" />
                                 </div>
                                 <div className="text-right">
                                     <h3 className="text-xl font-bold text-amber-800 mb-2">تعليم القرآن والقراءة</h3>
@@ -200,14 +200,14 @@ function AchievementsPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
                         {/* Mosaic/Masonry Layout */}
                         <motion.div variants={photoVariants} whileHover="hover" className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl shadow-lg">
-                            <img src="/doc/cultural_workshop.png" alt="مسرح الأطفال" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/doc/480552726_551734314588298_3109277901808268358_n.jpg" alt="مسرح الأطفال" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <p className="text-white text-xl font-bold">المسرح المدرسي</p>
                             </div>
                         </motion.div>
 
                         <motion.div variants={photoVariants} whileHover="hover" className="relative group overflow-hidden rounded-3xl shadow-lg">
-                            <img src="/doc/WhatsApp Image 2025-11-28 à 12.34.38_9efb9b31.jpg" alt="ورشة الرسم" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/doc/480452081_550198208075242_5916786413031097249_n.jpg" alt="ورشة الرسم" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                         </motion.div>
 
                         <motion.div variants={photoVariants} whileHover="hover" className="relative group overflow-hidden rounded-3xl shadow-lg bg-pink-100 flex items-center justify-center">
@@ -218,11 +218,11 @@ function AchievementsPage() {
                         </motion.div>
 
                         <motion.div variants={photoVariants} whileHover="hover" className="relative group overflow-hidden rounded-3xl shadow-lg">
-                            <img src="/doc/WhatsApp Image 2025-11-28 à 12.34.38_1f058b02.jpg" alt="أنشطة ترفيهية" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/doc/481765623_562673886827674_3761154756195867869_n.jpg" alt="أنشطة ترفيهية" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                         </motion.div>
 
                         <motion.div variants={photoVariants} whileHover="hover" className="relative group overflow-hidden rounded-3xl shadow-lg md:col-span-2">
-                            <img src="/doc/WhatsApp Image 2025-11-29 à 14.28.28_909dd54d.jpg" alt="صورة جماعية للأطفال" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/doc/473781104_527221590372904_4488469165095357166_n.jpg" alt="صورة جماعية للأطفال" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <p className="text-white text-lg font-bold">فرحة النجاح</p>
                             </div>
