@@ -2,6 +2,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import arTranslations from './locales/ar.json'
 import frTranslations from './locales/fr.json'
+import enTranslations from './locales/en.json'
 
 // Récupérer la langue sauvegardée ou utiliser l'arabe par défaut
 const savedLanguage = localStorage.getItem('language') || 'ar'
@@ -15,6 +16,9 @@ i18n
       },
       fr: {
         translation: frTranslations
+      },
+      en: {
+        translation: enTranslations
       }
     },
     lng: savedLanguage, // langue par défaut
@@ -25,4 +29,3 @@ i18n
   })
 
 export default i18n
-

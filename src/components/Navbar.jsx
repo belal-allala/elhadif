@@ -22,6 +22,19 @@ function Navbar() {
         setIsLangMenuOpen(false)
     }
 
+    const getLanguageDisplayName = (lang) => {
+        switch (lang) {
+            case 'ar':
+                return 'العربية'
+            case 'fr':
+                return 'Français'
+            case 'en':
+                return 'English'
+            default:
+                return 'العربية'
+        }
+    }
+
     return (
         <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +77,7 @@ function Navbar() {
                             >
                                 <Languages className="w-5 h-5 text-gray-700" />
                                 <span className="font-medium text-gray-700">
-                                    {currentLanguage === 'ar' ? 'العربية' : 'Français'}
+                                    {getLanguageDisplayName(currentLanguage)}
                                 </span>
                             </button>
                             
@@ -87,6 +100,15 @@ function Navbar() {
                                     >
                                         <span>Français</span>
                                         {currentLanguage === 'fr' && <span className="text-primary">✓</span>}
+                                    </button>
+                                    <button
+                                        onClick={() => handleLanguageChange('en')}
+                                        className={`w-full text-right px-4 py-2 hover:bg-gray-100 transition-colors flex items-center justify-between ${
+                                            currentLanguage === 'en' ? 'bg-primary/10 text-primary font-semibold' : 'text-gray-700'
+                                        }`}
+                                    >
+                                        <span>English</span>
+                                        {currentLanguage === 'en' && <span className="text-primary">✓</span>}
                                     </button>
                                 </div>
                             )}
@@ -136,7 +158,9 @@ function Navbar() {
                         {/* Sélecteur de langue mobile */}
                         <div className="px-4 py-2 border-t border-gray-200">
                             <div className="flex items-center justify-between mb-2">
-                                <span className="text-sm font-medium text-gray-700">اللغة / Langue</span>
+                                <span className="text-sm font-medium text-gray-700">
+                                    {getLanguageDisplayName(currentLanguage)}
+                                </span>
                             </div>
                             <div className="flex gap-2">
                                 <button
@@ -164,6 +188,19 @@ function Navbar() {
                                     }`}
                                 >
                                     Français
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        handleLanguageChange('en')
+                                        setIsMenuOpen(false)
+                                    }}
+                                    className={`flex-1 px-4 py-2 rounded-lg transition-colors ${
+                                        currentLanguage === 'en'
+                                            ? 'bg-primary text-white font-semibold'
+                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                    }`}
+                                >
+                                    English
                                 </button>
                             </div>
                         </div>

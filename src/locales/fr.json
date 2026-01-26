@@ -31,7 +31,9 @@
     "stat2Number": "+50",
     "stat2Label": "bénévoles qui forment le cœur battant de l'association",
     "stat3Number": "+5",
-    "stat3Label": "activités et programmes variés que nous organisons chaque semaine"
+    "stat3Label": "activités et programmes variés que nous organisons chaque semaine",
+    "imagesTitle": "Images de la page d’accueil",
+    "imagesAlt": "Image de la galerie"
   },
   "hero": {
     "title": "Association Al-Hadif",
@@ -69,7 +71,9 @@
     "objective1": "Renforcer les capacités des jeunes et les autonomiser",
     "objective2": "Renforcer la participation communautaire et la citoyenneté",
     "objective3": "Enrichir la vie culturelle et sportive",
-    "objective4": "Élargir le réseau de coopération et de partenariats"
+    "objective4": "Élargir le réseau de coopération et de partenariats",
+    "imagesTitle": "Images À propos",
+    "imagesAlt": "Image de la galerie"
   },
   "axes": {
     "title": "Nos domaines d'action et nos programmes",
@@ -111,7 +115,7 @@
     "axis4Program2Desc": "Nous cherchons à autonomiser les jeunes ambitieux, pour qu'ils deviennent capables de lancer leurs propres initiatives et de les gérer avec confiance et efficacité à l'avenir.",
     "axis5": "Développement social",
     "axis5Motto": "Notre solidarité est une force... avec elle, nous dessinons le sourire et soulageons la souffrance",
-    "axis5Desc": "Parce que le développement réel ne peut être complet sans réaliser la solidarité sociale, nous plaçons le travail social et humanitaire en tête de nos priorités à l'Association Al-Hadif. Nous croyons que notre devoir s'étend à se tenir aux côtés des catégories les plus nécessiteuses de notre société, à leur tendre la main, et à établir une culture de don et de solidarité entre tous les composants de la région.",
+    "axis5Desc": "Parce que le développement réel ne peut être complet sans réaliser la solidarité sociale, nous plaçons le travail social et humanitaire en tête de nos priorités à l'Association Al-Hadif. Nous croyons que notre devoir s'étend à se tenir aux côtés des catégories les plus nécessiteuses de notre society, à leur tendre la main, et à établir une culture de don et de solidarité entre tous les composants de la région.",
     "axis5Program1Title": "Convois caritatifs et solidaires",
     "axis5Program1Desc": "Nous cherchons à atteindre les zones reculées et les familles qui ont besoin d'un soutien urgent en organisant des convois humanitaires réguliers.",
     "axis5Program2Title": "Soutien aux familles nécessiteuses",
@@ -128,7 +132,9 @@
     "axis6Program3Title": "Promotion de la culture sportive",
     "axis6Program3Desc": "Nous cherchons à promouvoir une culture sportive positive, à travers des ateliers de sensibilisation et des activités qui mettent en évidence l'importance du sport comme mode de vie sain et source d'énergie positive.",
     "forward": "Vers un développement complet et durable",
-    "forwardDesc": "À travers ces six axes, nous cherchons à construire une société cohésive, consciente et créative. Nous croyons que le développement réel commence avec les jeunes, et que chaque domaine de ces domaines contribue à façonner un avenir meilleur pour notre région et notre pays."
+    "forwardDesc": "À travers ces six axes, nous cherchons à construire une société cohésive, consciente et créative. Nous croyons que le développement réel commence avec les jeunes, et que chaque domaine de ces domaines contribue à façonner un avenir meilleur pour notre région et notre pays.",
+    "imagesTitle": "Images Nos axes",
+    "imagesAlt": "Image de la galerie"
   },
   "contact": {
     "title": "Contactez-nous",
@@ -172,7 +178,9 @@
     "section3Subtitle": "Ateliers artistiques, théâtre et créativité",
     "ctaTitle": "Faites partie de notre prochaine histoire de succès",
     "ctaDesc": "Les portes de l'association sont toujours ouvertes aux bénévoles, contributeurs et partenaires. Rejoignez-nous pour faire la différence ensemble.",
-    "ctaButton": "Rejoignez-nous maintenant"
+    "ctaButton": "Rejoignez-nous maintenant",
+    "galleryTitle": "Galerie de photos",
+    "galleryAlt": "Photo des activités de l'association",
+    "newGalleryTitle": "Plus de moments"
   }
 }
-

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Handshake, Shield, Lightbulb, Eye, Users, Award, CheckCircle, Target, TrendingUp } from 'lucide-react'
+import { Handshake, Shield, Lightbulb, Eye, Users, Award, CheckCircle, Target, TrendingUp, Image as ImageIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 function AboutPage() {
@@ -64,6 +64,8 @@ function AboutPage() {
             },
         },
     }
+
+    const aboutImages = [7, 8, 9, 10, 11];
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-white">
@@ -194,6 +196,41 @@ function AboutPage() {
                                 )
                             })}
                         </motion.div>
+                    </div>
+                </section>
+
+                {/* Section Images About */}
+                <section className="py-12 md:py-16 px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="text-center mb-12"
+                        >
+                            <div className="flex items-center justify-center gap-4 mb-6">
+                                <ImageIcon className="w-10 h-10 text-primary" />
+                                <h2 className="text-3xl md:text-4xl font-bold text-secondary">{t('about.imagesTitle')}</h2>
+                            </div>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                            {aboutImages.map((imgNum) => (
+                                <motion.div
+                                    key={imgNum}
+                                    whileHover={{ scale: 1.05 }}
+                                    className="rounded-xl overflow-hidden shadow-lg h-48"
+                                >
+                                    <img
+                                        src={`/doc/${imgNum}.jpeg`}
+                                        alt={`${t('about.imagesAlt')} ${imgNum}`}
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 

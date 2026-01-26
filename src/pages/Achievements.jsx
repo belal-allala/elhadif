@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Camera, Star, Heart, Trophy, Users, Palette, BookOpen, Monitor, Sparkles } from 'lucide-react'
+import { Camera, Star, Heart, Trophy, Users, Palette, BookOpen, Monitor, Sparkles, Image as ImageIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 function AchievementsPage() {
@@ -32,6 +32,50 @@ function AchievementsPage() {
             transition: { duration: 0.3 }
         }
     }
+    
+    const galleryImages = [
+        "1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "7.jpeg", "8.jpeg", "9.jpeg", "10.jpeg",
+        "11.jpeg", "12.jpeg", "13.jpeg", "14.jpeg", "15.jpeg", "16.jpeg", "17.jpeg", "18.jpeg", "19.jpeg", "20.jpeg",
+        "WhatsApp Image 2025-11-26 à 09.14.09_f5279ff7.jpg",
+        "WhatsApp Image 2025-11-29 à 14.28.28_909dd54d.jpg",
+        "WhatsApp Image 2025-11-29 à 20.42.05_7822e775.jpg",
+        "WhatsApp Image 2025-11-29 à 20.42.06_6771a9f0.jpg",
+        "WhatsApp Image 2025-11-29 à 20.42.07_ca87403a.jpg",
+        "WhatsApp Image 2025-11-29 à 20.42.37_93bfbbac.jpg",
+        "WhatsApp Image 2025-12-01 à 23.32.44_70f8b284.jpg",
+        "WhatsApp Image 2025-12-01 à 23.37.37_36daed0e.jpg",
+        "WhatsApp Image 2025-12-01 à 23.37.37_9dc3b1f1.jpg",
+        "473544384_528675323560864_951026384474002252_n.jpg",
+        "475818635_535817212846675_350413084902809482_n.jpg",
+        "490770462_593413477087048_915918885641084605_n.jpg",
+        "473781104_527221590372904_4488469165095357166_n.jpg",
+        "474001505_527221713706225_6842397079159129986_n.jpg",
+        "474058605_530026146759115_7759097212140950000_n.jpg",
+        "474149660_527221377039592_1104953780114307147_n.jpg",
+        "474165704_529258100169253_3018369032961523509_n.jpg",
+        "474221359_529258863502510_8301961583081486289_n.jpg",
+        "474463509_528063146955415_6890631017194022179_n.jpg",
+        "474579187_529247773503619_3176517848621740742_n.jpg",
+        "475172223_533834216378308_7895275567139419436_n.jpg",
+        "475304524_533859179709145_7271653483775773847_n.jpg",
+        "477391018_545866651841731_5608729230383016776_n.jpg",
+        "480339567_551020044659725_1117060418684955346_n.jpg",
+        "480452081_550198208075242_5916786413031097249_n.jpg",
+        "480521298_551734797921583_1833412820494429933_n.jpg",
+        "480552726_551734314588298_3109277901808268358_n.jpg",
+        "480580196_551735071254889_8843780229456576281_n.jpg",
+        "480743125_550197618075301_4632357009740686694_n.jpg",
+        "480786255_558281293933600_4425357554266611002_n.jpg",
+        "480811431_551441004617629_4746309813513849413_n.jpg",
+        "481765623_562673886827674_3761154756195867869_n.jpg",
+        "482214505_561461336948929_6573881931013978044_n.jpg",
+        "487051105_577594808668915_6503870267768049242_n.jpg",
+        "491836816_593413530420376_1288311282498644930_n.jpg",
+        "499509161_619054824522913_3850711141376584016_n.jpg",
+        "515933115_658671643894564_5668456906398285101_n.jpg",
+        "569028992_751119377983123_5645548795845636049_n.jpg",
+        "583908967_769956176099443_8480314614194697521_n.jpg"
+    ];
 
     return (
         <div className="min-h-screen bg-[#fdfbf6]">
@@ -231,6 +275,45 @@ function AchievementsPage() {
                         </motion.div>
                     </div>
                 </motion.section>
+                
+                {/* --- Section 4: Image Gallery --- */}
+                <motion.section
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="mb-20"
+                >
+                    <div className="flex items-center justify-center gap-4 mb-16">
+                        <div className="h-1 flex-1 bg-gradient-to-l from-transparent to-teal-200"></div>
+                        <div className="text-center">
+                            <h2 className="text-4xl font-bold text-teal-500 mb-2">{t('achievements.galleryTitle')}</h2>
+                        </div>
+                        <div className="bg-teal-100 p-3 rounded-2xl">
+                            <ImageIcon className="w-10 h-10 text-teal-500" />
+                        </div>
+                        <div className="h-1 flex-1 bg-gradient-to-r from-transparent to-teal-200"></div>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {galleryImages.map((imageName, index) => (
+                            <motion.div
+                                key={index}
+                                variants={photoVariants}
+                                whileHover="hover"
+                                className="relative group overflow-hidden rounded-lg shadow-lg"
+                            >
+                                <img
+                                    src={`/doc/${imageName}`}
+                                    alt={`${t('achievements.galleryAlt')} ${index + 1}`}
+                                    className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                />
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.section>
 
                 {/* Footer Call to Action */}
                 <motion.div
@@ -259,4 +342,3 @@ function AchievementsPage() {
 }
 
 export default AchievementsPage
-
